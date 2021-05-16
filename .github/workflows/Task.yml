@@ -1,5 +1,5 @@
 #自动调用api保活，加密版
-name: Auto Api Secret
+name: Auto Api Task
 
 on: 
   release:
@@ -49,8 +49,8 @@ jobs:
         rm -f configkey.txt    
     - name: Commit #上传新的refresh_token到仓库
       run: |
-        git config --global user.email admin@nange.cn
-        git config --global user.name Her
+        git config --global user.email AutoupdateRobot@email.com
+        git config --global user.name AutoupdateRobot
         git add .
         git commit -m "update new refresh_token" -a
     - name: Push changes
